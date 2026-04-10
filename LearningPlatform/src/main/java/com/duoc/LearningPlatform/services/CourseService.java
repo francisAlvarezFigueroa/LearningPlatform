@@ -1,7 +1,7 @@
 package com.duoc.LearningPlatform.services;
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import com.duoc.LearningPlatform.model.Course;
 
@@ -17,6 +17,12 @@ public class CourseService {
         courses.add(new Course(333L,"OOP", "Jane Austen", true));
     }
 
+    public List<Course> getCourses(){
 
+        return courses.stream()
+        .filter((course) -> course.isActive() ==true)
+        .sorted(Comparator.comparing(Course::getName))
+        .toList();
+    }
 
 }
