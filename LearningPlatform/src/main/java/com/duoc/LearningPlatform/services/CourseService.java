@@ -17,7 +17,8 @@ public class CourseService {
         this.courseRepository = courseRepository; 
     }
 
-    public List<Course> getCourses(){ // metodo que devuelve lista de cursos disponibles 
+    public List<Course> getCourses(){ // metodo que devuelve lista de cursos disponibles
+        //todo: definir si queremos filtrar aqui o en el coursRepository con findByIsActiveTrue()
         return courseRepository.findAll()
         .stream()
         .filter(Course::isActive)

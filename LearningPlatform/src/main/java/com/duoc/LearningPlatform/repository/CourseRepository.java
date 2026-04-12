@@ -1,5 +1,5 @@
 package com.duoc.LearningPlatform.repository;
 
-public class CourseRepository {
+public interface CourseRepository {
 
 }
