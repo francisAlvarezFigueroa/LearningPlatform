@@ -20,7 +20,7 @@ public class Course {
     private String instructor; 
 
     @Column(name="Curso_activo", nullable=false)
-    private boolean active; 
+    private boolean isActive; 
 
 
     public Course(){}
@@ -31,7 +31,7 @@ public class Course {
         this.id=id;
         this.name = name;
         this.instructor = instructor;
-        this.active = active;
+        this.isActive = active;
     }
 
 
@@ -39,7 +39,7 @@ public class Course {
     public Course(String name, String instructor, boolean active) {
         this.name = name;
         this.instructor = instructor;
-        this.active = active;
+        this.isActive = active;
     }
     
      public Long getId() {
@@ -63,11 +63,11 @@ public class Course {
     }
 
     public boolean isActive() {
-        return active;
+        return isActive;
     }
 
     public void setActive(boolean active) {
-        this.active = active;
+        this.isActive = active;
     }
 
 
