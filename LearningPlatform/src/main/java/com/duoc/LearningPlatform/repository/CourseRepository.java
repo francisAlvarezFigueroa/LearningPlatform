@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 import com.duoc.LearningPlatform.model.Course;
 
 public interface CourseRepository extends JpaRepository<Course, Long> {
-    List<Course> findByIsActiveTrue();
+    List<Course> findByActiveTrue();
 }

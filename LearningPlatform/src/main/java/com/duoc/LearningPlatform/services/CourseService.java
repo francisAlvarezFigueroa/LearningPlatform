@@ -27,7 +27,7 @@ public class CourseService {
 
     //metodo para traer solo los cursos activos 
     public List <Course> getActiveCourses(){
-        return courseRepository.findByIsActiveTrue()
+        return courseRepository.findByActiveTrue()
                 .stream()
                 .sorted(Comparator.comparing (Course::getName))
                 .toList();
